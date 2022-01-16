@@ -1,0 +1,99 @@
+<html>
+  <head>
+    <title>
+      Finance-Bot
+    </title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: black;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      .container {
+        padding: 16px;
+        background-color: white;
+      }
+      
+      input[type="text"],
+      input[type="email"] {
+        width: 100%;
+        height: 5px;
+        padding: 15px;
+        margin: 10px 0 22px 0;
+      }
+      input[type="text"]:focus,
+      input[type="email"]:focus {
+        background-color: #ddd;
+        outline: none;
+      }
+      input[type="range"] {
+        padding: 15px;
+        margin: 10px 0 22px 0;
+        width: 60%;
+      }
+      input[type="submit"] {
+        width: 100%;
+        height: 45px;
+        background-color: indigo;
+        color: white;
+      }
+      input[type="submit"]:hover {
+        opacity: .5;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <form id="financeForm" method="post" action="process2.php">
+        <h1>FINANCE BOT</h1>
+        <p>Please enter your details below.</p>
+        <hr />
+        <label>Name</label>
+        <input type="text" name="name" placeholder="Name" />
+        <br />
+        <label>Province</label>
+        <input type="text" name="province" placeholder="Province" />
+        <br />
+        <label>Email</label>
+        <input type="email" name="email" placeholder="Email" />
+        <br />
+        <label>Annual Income</label>
+        <input type="text" name="income" placeholder="Annual Income" />
+        <br />
+        <label>Housing costs per. month</label>
+        <input type="text" name="housingCosts" placeholder="This includes rent and utilities" />
+        <br />
+        <label>Average Monthly Groceries</label>
+        <input type="text" name="groceries" placeholder="Monthly groceries" />
+        <br />
+        <label>Average monthly additional spending</label>
+        <input type="text" name="cellPhone" placeholder="Average monthly additional spending" />
+        <br />
+
+        <label>Number of other people you are financially responsible for</label>
+        <input type="text" name="children" placeholder="Ex. Children" />
+        <br />
+
+        <label>Insurance</label>
+        <input type="text" name="insurance" placeholder="Insurance" />
+        <br />
+        <label>Liquid Assets</label>
+        <input type="text" name="assets" placeholder="Liquid Assets" />
+        <br />
+        <label>Liabilities</label>
+        <input type="text" name="liabilities" placeholder="Ex. Debt, mortgage, credit cards" />
+        <br />
+
+        <label>What is your the % of an investment you are willing to risk</label>
+        <div class="slidecontainer">
+          <input type="range" name="risk" min="1" max="100" value="5" class="slider" id="myRange">
+        </div>
+
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+</div>
+  </body>
+</html>
